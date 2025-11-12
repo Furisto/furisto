@@ -17,7 +17,7 @@ Built billing infrastructure for usage-based pricing and subscription management
 ## Open Source
 
 ### Youki - Container Runtime in Rust
-[github.com/youki-dev/youki](https://github.com/youki-dev/youki) • 7k stars
+[github.com/youki-dev/youki](https://github.com/youki-dev/youki) • 7.1k stars
 
 OCI-compliant container runtime. Alternative to runc (Docker) and crun (Red Hat). Community-driven, now a CNCF sandbox project.
 
@@ -37,18 +37,32 @@ Docker delegates container creation to runtimes like youki, which handle namespa
 Rust implementation of OCI specifications. Wrote the initial image spec implementation and contributed heavily to the runtime spec. Used by the containerd project, Kubewarden, and others.
 
 ### Gitpod
-[github.com/gitpod-io/gitpod](https://github.com/gitpod-io/gitpod) • 13.4k stars
+[github.com/gitpod-io/gitpod](https://github.com/gitpod-io/gitpod) • 13.5k stars
 
 Contributor to Gitpod's cloud development environment platform. Some of my work:
 
-**Kubernetes Controller ([ws-manager-mk2](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+label%3A%22feature%3A+ws-manager-mk2%22))**
-Built controller managing workspace lifecycle for Gitpod's SaaS platform. Replaced gRPC-based state management with CRD-based architecture. Decoupled workspace lifecycle from pod lifecycle, enabling restarts without service interruption. Improved reliability from 99.9% to 99.99%.
+#### [Kubernetes Controller (ws-manager-mk2)](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+label%3A%22feature%3A+ws-manager-mk2%22)
 
-**[Workspace Classes](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+author%3AFuristo+label%3A%22feature%3A+workspace+classes%22)**
+Built controller managing workspace lifecycle for Gitpod's SaaS platform. 
+
+Replaced gRPC-based state management with CRD-based architecture. Decoupled workspace lifecycle from pod lifecycle, enabling restarts without service interruption. 
+
+Improved reliability from 99.9% to 99.99%.
+
+#### [Workspace Classes](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+author%3AFuristo+label%3A%22feature%3A+workspace+classes%22)
+
 Implemented resource tiering system enabling customers to select differently sized workspaces based on computational needs.
 
-**[DDoS Protection](https://github.com/gitpod-io/gitpod/pull/11255)**
-Initiated and implemented rate limiting using nftables to prevent abuse. Used token bucket algorithm to limit connection attempts while allowing existing connections to continue. Reduced on-call alerts by 34%.
+#### [DDoS Protection](https://github.com/gitpod-io/gitpod/pull/11255)
 
-**[Pressure Stall Information (PSI)](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+author%3AFuristo+label%3A%22feature%3A+psi%22)**
-Implemented scraping of Linux PSI metrics to diagnose performance issues in customer workspaces. Enables troubleshooting resource contention (CPU, memory, I/O pressure).
+Initiated and implemented rate limiting using nftables to prevent abuse. 
+
+Used token bucket algorithm to limit connection attempts while allowing existing connections to continue. 
+
+Reduced on-call alerts by 34%.
+
+#### [Pressure Stall Information (PSI)](https://github.com/gitpod-io/gitpod/pulls?q=is%3Apr+is%3Aclosed+author%3AFuristo+label%3A%22feature%3A+psi%22)
+
+Implemented scraping of Linux PSI metrics to diagnose performance issues in customer workspaces. 
+
+Enables troubleshooting resource contention (CPU, memory, I/O pressure).
